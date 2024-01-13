@@ -4,27 +4,61 @@ import React, { useState } from "react";
 function App() {
   const [num1, setNum1] = useState("");
   const [num2, setNum2] = useState("");
-  const [result, setResult] = useState("");
+  let [result, setResult] = useState("");
+  const [res, resSet] = useState("")
+  const [color , setColor] = useState("")
 
   function handleInputChange(e, setter) {
     const value = e.target.value;
     setter(value);
   }
-
-  function add() {
+function add() {
+  if (num1 === "" || num2 === "") {
+    setResult("Both numbers are required for addition");
+    resSet("Error !");
+    setColor("red");
+  } else {
     setResult(Number(num1) + Number(num2));
+    resSet("Success");
+    setColor("green");
   }
+}
+
 
   function subtract() {
+  if (num1 === "" || num2 === "") {
+    setResult("Both numbers are required for addition");
+    resSet("Error !");
+    setColor("red");
+  } else {
     setResult(Number(num1) - Number(num2));
+    resSet("Success");
+    setColor("green");
+  }
   }
 
   function multiply() {
-    setResult(Number(num1) * Number(num2));
+   if (num1 === "" || num2 === "") {
+     setResult("Both numbers are required for addition");
+     resSet("Error !");
+     setColor("red");
+   } else {
+     setResult(Number(num1) * Number(num2));
+     resSet("Success");
+     setColor("green");
+   }
   }
 
   function divide() {
-    setResult(Number(num1) / Number(num2));
+    if (num1 === "" || num2 === "") {
+      setResult("Both numbers are required for addition");
+      resSet("Error !");
+      setColor("red");
+    } else {
+      setResult(Number(num1) / Number(num2));
+      resSet("Success");
+      setColor("green");
+    }
   }
 
   return (
@@ -62,6 +96,8 @@ function App() {
       </div>
 
       <p>
+        <h3 style={{ color: color }}>{res}</h3>
+
         <span id="result">{result}</span>
       </p>
     </div>
