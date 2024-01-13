@@ -20,7 +20,7 @@ function add() {
   } else {
     setResult(Number(num1) + Number(num2));
     resSet("Success");
-    setColor("green");
+    setColor("#0057FF");
   }
 }
 
@@ -33,7 +33,7 @@ function add() {
   } else {
     setResult(Number(num1) - Number(num2));
     resSet("Success");
-    setColor("green");
+    setColor("#0057FF");
   }
   }
 
@@ -45,7 +45,7 @@ function add() {
    } else {
      setResult(Number(num1) * Number(num2));
      resSet("Success");
-     setColor("green");
+     setColor("#0057FF");
    }
   }
 
@@ -57,7 +57,7 @@ function add() {
     } else {
       setResult(Number(num1) / Number(num2));
       resSet("Success");
-      setColor("green");
+      setColor("#0057FF");
     }
   }
 
